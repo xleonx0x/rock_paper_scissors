@@ -36,16 +36,16 @@ body {
 .results {
     height:50px;
     font-size: 50px;
-    margin-bottom: 30px;
+    margin: 20px 0 30px 0;
 }
 
 .restart_btn button {
     height: 60px;
     width: 80px;
     border: none;
-    color: rgb(94, 94, 161);
-    background-color: rgb(136, 253, 231);
+    color: rgb(0, 0, 0);
     font-weight: bold;
+    font-size: 15px;
 }
 
 .restart_btn {
