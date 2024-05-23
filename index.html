@@ -5,8 +5,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="style.css" rel="stylesheet">
+        <script src="script.js" defer></script>
     </head>
     <body>
-        <script src="script.js"></script>
+        <div class="container">
+            <div class="score">
+                <div>Human: <span id="human_score">0</span></div>
+                <div>Computer: <span id=computer_score>0</span></div>
+            </div>
+            <div class="buttons">
+                <button id="rock">🧱</button>
+                <button id="paper">📄</button>
+                <button id="scissors">✂️</button>
+            </div>
+            <div class="results"></div>
+            <div class="restart_btn"></div>
+        </div>
     </body>
 </html>

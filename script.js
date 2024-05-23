@@ -1,6 +1,45 @@
 let humanScore = 0;
 let computerScore = 0;
 
+const btns = document.querySelectorAll("button");
+
+const result = document.querySelector(".results");
+
+const human_score = document.querySelector("#human_score");
+const computer_score = document.querySelector("#computer_score");
+
+const restart_btn = document.querySelector(".restart_btn");
+
+const reset = document.createElement("button");
+reset.textContent = "Restart";
+
+btns.forEach((button) => {
+    button.addEventListener("click", () => {
+        if (humanScore < 5 && computerScore < 5) {
+            result.textContent = playRound(button.id, getComputerChoice()); 
+            human_score.textContent = humanScore;
+            computer_score.textContent = computerScore;
+        }
+        
+        if (humanScore == 5) {
+            result.textContent = "You have won :D";
+            console.log("test");
+            restart_btn.appendChild(reset);
+        } else if (computerScore == 5) {
+            result.textContent = "You have lost :(";
+            restart_btn.appendChild(reset);
+        }
+    });
+});
+
+reset.addEventListener("click", () => {
+    humanScore = 0;
+    computerScore = 0;
+    human_score.textContent = humanScore;
+    computer_score.textContent = computerScore;
+    result.textContent = "";
+});
+
 
 function getComputerChoice() {
     let key = Math.random();
@@ -11,10 +50,6 @@ function getComputerChoice() {
     } else {
         return "paper";
     }
-}
-
-function getHumanChoice() {
-    return prompt("Rock, Paper or Scissors?");
 }
 
 function playRound(humanChoice, computerChoice) {
@@ -51,14 +86,3 @@ function playRound(humanChoice, computerChoice) {
             return "Invalid choice!";
     }
 }
-
-function playGame() {
-    for (i = 0; i < 5; i++) {
-        console.log(playRound(getHumanChoice(), getComputerChoice()));
-        console.log("Human: " + humanScore + "\nComputer: " + computerScore);
-    }
-    let humanScore = 0;
-    let computerScore = 0;
-}
-
-playGame();

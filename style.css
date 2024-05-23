@@ -1,0 +1,53 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.score {
+    display: flex;
+    gap: 30px;
+    font-size: 50px;
+    justify-content: center;
+
+}
+
+.buttons {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.buttons button {
+    border: none;
+    width: 400px;
+    height: 400px;
+    font-size: 300px;
+}
+
+.results {
+    height:50px;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.restart_btn button {
+    height: 60px;
+    width: 80px;
+    border: none;
+    color: rgb(94, 94, 161);
+    background-color: rgb(136, 253, 231);
+    font-weight: bold;
+}
+
+.restart_btn {
+    height: 60px;
+}
