@@ -12,6 +12,7 @@ const restart_btn = document.querySelector(".restart_btn");
 
 const reset = document.createElement("button");
 reset.textContent = "Restart";
+restart_btn.appendChild(reset);
 
 btns.forEach((button) => {
     button.addEventListener("click", () => {
@@ -24,10 +25,8 @@ btns.forEach((button) => {
         if (humanScore == 5) {
             result.textContent = "You have won :D";
             console.log("test");
-            restart_btn.appendChild(reset);
         } else if (computerScore == 5) {
             result.textContent = "You have lost :(";
-            restart_btn.appendChild(reset);
         }
     });
 });
